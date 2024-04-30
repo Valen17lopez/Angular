@@ -26,15 +26,14 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
-
+    
       if (credentials.email === 'user@example.com' && credentials.password === '123') {
         this.router.navigate(['/catalogo']);
        
       } else {
-
+      
         this.authenticationError = true;
-        console.log("Datos de formulario",this.loginForm.value)
-     
+       
       }
     } else {
       this.loginForm.markAllAsTouched();
